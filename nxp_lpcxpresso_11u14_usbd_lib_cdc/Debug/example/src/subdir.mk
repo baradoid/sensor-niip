@@ -41,14 +41,14 @@ C_DEPS += \
 example/src/%.o: ../example/src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU C Compiler'
-	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -I"C:\dev\niip-sonar\nxp_lpcxpresso_11u14_usbd_lib_cdc\example\inc" -I"C:\dev\niip-sonar\nxp_lpcxpresso_11u14_usbd_lib_cdc\freertos\include" -I"C:\dev\niip-sonar\lpc_chip_11uxx_lib\inc" -I"C:\dev\niip-sonar\nxp_lpcxpresso_11u14_board_lib\inc" -I"C:\dev\niip-sonar\lpc_chip_11uxx_lib\inc\usbd" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -I"D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_usbd_lib_cdc\example\inc" -I"D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_usbd_lib_cdc\freertos\include" -I"D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\inc" -I"D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_board_lib\inc" -I"D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\inc\usbd" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 example/src/cr_startup_lpc11xx.o: ../example/src/cr_startup_lpc11xx.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU C Compiler'
-	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -I"C:\dev\niip-sonar\nxp_lpcxpresso_11u14_usbd_lib_cdc\example\inc" -I"C:\dev\niip-sonar\nxp_lpcxpresso_11u14_usbd_lib_cdc\freertos\include" -I"C:\dev\niip-sonar\lpc_chip_11uxx_lib\inc" -I"C:\dev\niip-sonar\nxp_lpcxpresso_11u14_board_lib\inc" -I"C:\dev\niip-sonar\lpc_chip_11uxx_lib\inc\usbd" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"example/src/cr_startup_lpc11xx.d" -o "$@" "$<"
+	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -I"D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_usbd_lib_cdc\example\inc" -I"D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_usbd_lib_cdc\freertos\include" -I"D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\inc" -I"D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_board_lib\inc" -I"D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\inc\usbd" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"example/src/cr_startup_lpc11xx.d" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

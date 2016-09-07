@@ -490,3 +490,15 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/nxp_lpcxpress
 
 !ENTRY org.eclipse.cdt.core 1 0 2016-09-07 12:36:57.971
 !MESSAGE Indexed 'nxp_lpcxpresso_11u14_periph_uart' (3 sources, 28 headers) in 0,107 sec: 1 751 declarations; 2 244 references; 5 unresolved inclusions; 11 syntax errors; 657 unresolved names (14 %)
+!SESSION 2016-09-07 13:02:32.946 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ru_RU
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2016-09-07 13:02:49.590
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2016-09-07 13:02:49.591
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator

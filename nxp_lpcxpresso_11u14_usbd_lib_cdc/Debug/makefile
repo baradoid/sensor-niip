@@ -30,7 +30,7 @@ all: nxp_lpcxpresso_11u14_usbd_lib_cdc.axf
 nxp_lpcxpresso_11u14_usbd_lib_cdc.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"C:\dev\niip-sonar\nxp_lpcxpresso_11u14_board_lib\Debug" -L"C:\dev\niip-sonar\lpc_chip_11uxx_lib\Debug" -L"C:\dev\niip-sonar\lpc_chip_11uxx_lib\libs" -Xlinker -Map="nxp_lpcxpresso_11u14_usbd_lib_cdc.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "nxp_lpcxpresso_11u14_usbd_lib_cdc_Debug.ld" -o "nxp_lpcxpresso_11u14_usbd_lib_cdc.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_board_lib\Debug" -L"D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\Debug" -L"D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\libs" -Xlinker -Map="nxp_lpcxpresso_11u14_usbd_lib_cdc.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "nxp_lpcxpresso_11u14_usbd_lib_cdc_Debug.ld" -o "nxp_lpcxpresso_11u14_usbd_lib_cdc.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

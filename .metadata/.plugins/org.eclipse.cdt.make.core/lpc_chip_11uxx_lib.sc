@@ -2,17 +2,17 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="com.crt.advproject.config.lib.debug.220972536;com.crt.advproject.config.lib.debug.220972536.;com.crt.advproject.gcc.lib.debug.1152379842;com.crt.advproject.compiler.input.1224257056">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="c:/nxp/lpcxpresso_8.1.4_606/lpcxpresso/tools/redlib/include"/>
-<includePath path="c:/nxp/lpcxpresso_8.1.4_606/lpcxpresso/tools/features/include"/>
+<includePath path="c:/nxp/lpcxpresso_8.2.0_647/lpcxpresso/tools/redlib/include"/>
+<includePath path="c:/nxp/lpcxpresso_8.2.0_647/lpcxpresso/tools/features/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_VERSION__=201112L"/>
 <definedSymbol symbol="__STDC_UTF_16__=1"/>
 <definedSymbol symbol="__STDC_UTF_32__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=5"/>
-<definedSymbol symbol="__GNUC_MINOR__=2"/>
+<definedSymbol symbol="__GNUC_MINOR__=3"/>
 <definedSymbol symbol="__GNUC_PATCHLEVEL__=1"/>
-<definedSymbol symbol="__VERSION__=&quot;5.2.1 20151202 (release) [ARM/embedded-5-branch revision 231848]&quot;"/>
+<definedSymbol symbol="__VERSION__=&quot;5.3.1 20160307 (release) [ARM/embedded-5-branch revision 234589]&quot;"/>
 <definedSymbol symbol="__ATOMIC_RELAXED=0"/>
 <definedSymbol symbol="__ATOMIC_SEQ_CST=5"/>
 <definedSymbol symbol="__ATOMIC_ACQUIRE=2"/>
@@ -351,17 +351,17 @@
 </instance>
 <instance id="com.crt.advproject.config.lib.debug.220972536;com.crt.advproject.config.lib.debug.220972536.;com.crt.advproject.gas.lib.debug.2138545421;com.crt.advproject.assembler.input.769893335">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="c:/nxp/lpcxpresso_8.1.4_606/lpcxpresso/tools/redlib/include"/>
-<includePath path="c:/nxp/lpcxpresso_8.1.4_606/lpcxpresso/tools/features/include"/>
+<includePath path="c:/nxp/lpcxpresso_8.2.0_647/lpcxpresso/tools/redlib/include"/>
+<includePath path="c:/nxp/lpcxpresso_8.2.0_647/lpcxpresso/tools/features/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_VERSION__=201112L"/>
 <definedSymbol symbol="__STDC_UTF_16__=1"/>
 <definedSymbol symbol="__STDC_UTF_32__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=5"/>
-<definedSymbol symbol="__GNUC_MINOR__=2"/>
+<definedSymbol symbol="__GNUC_MINOR__=3"/>
 <definedSymbol symbol="__GNUC_PATCHLEVEL__=1"/>
-<definedSymbol symbol="__VERSION__=&quot;5.2.1 20151202 (release) [ARM/embedded-5-branch revision 231848]&quot;"/>
+<definedSymbol symbol="__VERSION__=&quot;5.3.1 20160307 (release) [ARM/embedded-5-branch revision 234589]&quot;"/>
 <definedSymbol symbol="__ATOMIC_RELAXED=0"/>
 <definedSymbol symbol="__ATOMIC_SEQ_CST=5"/>
 <definedSymbol symbol="__ATOMIC_ACQUIRE=2"/>

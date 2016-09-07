@@ -1,113 +1,89 @@
-03:00:17 **** Incremental Build of configuration Release for project lpc_chip_11uxx_lib ****
+16:10:26 **** Incremental Build of configuration Debug for project lpc_chip_11uxx_lib ****
 make -r all 
 make: Nothing to be done for `all'.
-03:00:18 **** Incremental Build of configuration Release for project nxp_lpcxpresso_11u14_board_lib ****
+16:10:26 **** Incremental Build of configuration Debug for project nxp_lpcxpresso_11u14_board_lib ****
 make -r all 
 make: Nothing to be done for `all'.
-03:00:19 **** Incremental Build of configuration Release for project nxp_lpcxpresso_11u14_usbd_lib_cdc ****
+16:10:27 **** Incremental Build of configuration Debug for project nxp_lpcxpresso_11u14_usbd_lib_cdc ****
 make -r all 
 Building file: ../example/src/esp.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -D__REDLIB__ -I"C:\dev\niip-sonar\nxp_lpcxpresso_11u14_usbd_lib_cdc\example\inc" -I"C:\dev\niip-sonar\nxp_lpcxpresso_11u14_usbd_lib_cdc\freertos\include" -I"C:\dev\niip-sonar\lpc_chip_11uxx_lib\inc" -I"C:\dev\niip-sonar\nxp_lpcxpresso_11u14_board_lib\inc" -I"C:\dev\niip-sonar\lpc_chip_11uxx_lib\inc\usbd" -Os -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/esp.d" -MT"example/src/esp.o" -MT"example/src/esp.d" -o "example/src/esp.o" "../example/src/esp.c"
-In file included from C:\dev\niip-sonar\lpc_chip_11uxx_lib\inc/chip.h:232:0,
-                 from C:\dev\niip-sonar\nxp_lpcxpresso_11u14_board_lib\inc/board.h:35,
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -I"D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_usbd_lib_cdc\example\inc" -I"D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_usbd_lib_cdc\freertos\include" -I"D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\inc" -I"D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_board_lib\inc" -I"D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\inc\usbd" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/esp.d" -MT"example/src/esp.o" -MT"example/src/esp.d" -o "example/src/esp.o" "../example/src/esp.c"
+In file included from D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\inc/chip.h:232:0,
+                 from D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_board_lib\inc/board.h:35,
                  from ../example/src/esp.c:1:
-C:\dev\niip-sonar\lpc_chip_11uxx_lib\inc/pmu_11xx.h:49:8: warning: missing terminating " character
+D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\inc/pmu_11xx.h:49:8: warning: missing terminating " character
  #error "LPC1125 support for the PMU driver is not ready
         ^
-../example/src/esp.c: In function 'uartPrintf':
-../example/src/esp.c:83:44: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
-  Chip_UART_SendRB(LPC_USART, &txring, str, strlen(str));
-                                            ^
 ../example/src/esp.c: In function 'espReadString':
-../example/src/esp.c:100:3: warning: implicit declaration of function 'vcomPrintfLen' [-Wimplicit-function-declaration]
+../example/src/esp.c:101:3: warning: implicit declaration of function 'vcomPrintfLen' [-Wimplicit-function-declaration]
    vcomPrintfLen(str, rdCnt); //debug
    ^
 ../example/src/esp.c: In function 'espReadStringByChar':
-../example/src/esp.c:171:6: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
-      memcpy(recvStr,
-      ^
-../example/src/esp.c:186:11: warning: implicit declaration of function 'memcmp' [-Wimplicit-function-declaration]
-        if(memcmp(recvStr, "+IPD", strlen("+IPD")) == 0){
-           ^
-../example/src/esp.c:202:17: warning: implicit declaration of function 'memchr' [-Wimplicit-function-declaration]
-       char *pch=memchr(recvStr, ':', rdInd);
-                 ^
-../example/src/esp.c:202:17: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
-../example/src/esp.c:207:14: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
-        pch = strtok(ipdTempStr, ",:");
-              ^
-../example/src/esp.c:207:12: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
-        pch = strtok(ipdTempStr, ",:");
-            ^
-../example/src/esp.c:210:23: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+../example/src/esp.c:211:23: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
           payLoadLen = atoi(pch);
                        ^
-../example/src/esp.c:216:13: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
-         pch = strtok(NULL, ",:");
-             ^
-../example/src/esp.c:135:7: warning: unused variable 'tempStr' [-Wunused-variable]
+../example/src/esp.c:136:7: warning: unused variable 'tempStr' [-Wunused-variable]
   char tempStr[20];
        ^
-../example/src/esp.c:132:6: warning: unused variable 'rdCnt' [-Wunused-variable]
+../example/src/esp.c:133:6: warning: unused variable 'rdCnt' [-Wunused-variable]
   int rdCnt, rdInd = 0, ret = 0;
       ^
 ../example/src/esp.c: In function 'waitForEspAnswerToBuf':
-../example/src/esp.c:249:3: warning: implicit declaration of function 'vcomPrintf' [-Wimplicit-function-declaration]
+../example/src/esp.c:250:3: warning: implicit declaration of function 'vcomPrintf' [-Wimplicit-function-declaration]
    vcomPrintf(str);
    ^
-../example/src/esp.c:251:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+../example/src/esp.c:252:9: warning: passing argument 1 of 'strcpy' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
   strcpy(answStr, recvStr);
-  ^
-../example/src/esp.c: In function 'waitForEspAnswerString':
-../example/src/esp.c:274:7: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
-    if(strcmp(&(recvStr[strLen-answStrLen]), answStr) == 0){
-       ^
-In file included from ../example/src/esp.c:8:0:
+         ^
+In file included from ../example/src/esp.c:4:0:
+c:\nxp\lpcxpresso_8.2.0_647\lpcxpresso\tools\redlib\include\string.h:36:14: note: expected 'char * restrict' but argument is of type 'const char *'
+ extern char *strcpy(char * restrict __s1,
+              ^
+In file included from ../example/src/esp.c:9:0:
 ../example/src/esp.c: In function 'espSend':
-C:\dev\niip-sonar\nxp_lpcxpresso_11u14_usbd_lib_cdc\example\inc/esp.h:24:22: warning: passing argument 2 of 'espSendCommand' makes integer from pointer without a cast [-Wint-conversion]
+D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_usbd_lib_cdc\example\inc/esp.h:24:22: warning: passing argument 2 of 'espSendCommand' makes integer from pointer without a cast [-Wint-conversion]
  #define serverPort   "1488"
                       ^
-../example/src/esp.c:335:37: note: in expansion of macro 'serverPort'
+../example/src/esp.c:336:37: note: in expansion of macro 'serverPort'
   if(espSendCommand(hostIp[ssidInd], serverPort, cmd, 10000) == false){
                                      ^
-../example/src/esp.c:292:6: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'char *'
+../example/src/esp.c:293:6: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'char *'
  bool espSendCommand(const char *ip, uint16_t port, const char *cmdStr, uint32_t to)
       ^
-../example/src/esp.c: In function 'isWifiConnected':
-../example/src/esp.c:452:12: warning: implicit declaration of function 'strncmp' [-Wimplicit-function-declaration]
-    else if(strncmp(str, "+CWJAP_CUR:", strlen("+CWJAP_CUR:")) == 0){
-            ^
-In file included from ../example/src/esp.c:8:0:
+In file included from ../example/src/esp.c:9:0:
 ../example/src/esp.c: In function 'vEspTask':
-C:\dev\niip-sonar\nxp_lpcxpresso_11u14_usbd_lib_cdc\example\inc/esp.h:24:22: warning: passing argument 2 of 'espSendCommand' makes integer from pointer without a cast [-Wint-conversion]
+D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_usbd_lib_cdc\example\inc/esp.h:24:22: warning: passing argument 2 of 'espSendCommand' makes integer from pointer without a cast [-Wint-conversion]
  #define serverPort   "1488"
                       ^
-../example/src/esp.c:737:38: note: in expansion of macro 'serverPort'
+../example/src/esp.c:778:38: note: in expansion of macro 'serverPort'
       espSendCommand(hostIp[ssidInd], serverPort, "2345", 10000);
                                       ^
-../example/src/esp.c:292:6: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'char *'
+../example/src/esp.c:293:6: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'char *'
  bool espSendCommand(const char *ip, uint16_t port, const char *cmdStr, uint32_t to)
       ^
-../example/src/esp.c:600:6: warning: unused variable 'rdCnt' [-Wunused-variable]
+../example/src/esp.c:603:7: warning: unused variable 'warn' [-Wunused-variable]
+  bool warn = false;
+       ^
+../example/src/esp.c:601:6: warning: unused variable 'rdCnt' [-Wunused-variable]
   int rdCnt, strLen;
       ^
 ../example/src/esp.c: At top level:
-../example/src/esp.c:87:13: warning: 'espReadString' defined but not used [-Wunused-function]
+../example/src/esp.c:88:13: warning: 'espReadString' defined but not used [-Wunused-function]
  static bool espReadString(char *recvStr, int *strLen, uint32_t to)
              ^
 Finished building: ../example/src/esp.c
  
 Building target: nxp_lpcxpresso_11u14_usbd_lib_cdc.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\dev\niip-sonar\nxp_lpcxpresso_11u14_board_lib\Release" -L"C:\dev\niip-sonar\lpc_chip_11uxx_lib\Release" -L"C:\dev\niip-sonar\lpc_chip_11uxx_lib\libs" -Xlinker -Map="nxp_lpcxpresso_11u14_usbd_lib_cdc.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "nxp_lpcxpresso_11u14_usbd_lib_cdc_Release.ld" -o "nxp_lpcxpresso_11u14_usbd_lib_cdc.axf"  ./freertos/croutine.o ./freertos/event_groups.o ./freertos/heap_1.o ./freertos/list.o ./freertos/port.o ./freertos/queue.o ./freertos/tasks.o ./freertos/timers.o  ./example/src/cdc_desc.o ./example/src/cdc_main.o ./example/src/cdc_vcom.o ./example/src/cdc_vcom_utils.o ./example/src/cr_startup_lpc11xx.o ./example/src/esp.o ./example/src/led_but.o ./example/src/relay.o ./example/src/sysinit.o   -lnxp_lpcxpresso_11u14_board_lib -llpc_chip_11uxx_lib -lusbd_11uxx_lib
+arm-none-eabi-gcc -nostdlib -L"D:\dev\sonar\sonar-niip\nxp_lpcxpresso_11u14_board_lib\Debug" -L"D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\Debug" -L"D:\dev\sonar\sonar-niip\lpc_chip_11uxx_lib\libs" -Xlinker -Map="nxp_lpcxpresso_11u14_usbd_lib_cdc.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "nxp_lpcxpresso_11u14_usbd_lib_cdc_Debug.ld" -o "nxp_lpcxpresso_11u14_usbd_lib_cdc.axf"  ./freertos/croutine.o ./freertos/event_groups.o ./freertos/heap_1.o ./freertos/list.o ./freertos/port.o ./freertos/queue.o ./freertos/tasks.o ./freertos/timers.o  ./example/src/cdc_desc.o ./example/src/cdc_main.o ./example/src/cdc_vcom.o ./example/src/cdc_vcom_utils.o ./example/src/cr_startup_lpc11xx.o ./example/src/esp.o ./example/src/led_but.o ./example/src/relay.o ./example/src/sysinit.o   -lnxp_lpcxpresso_11u14_board_lib -llpc_chip_11uxx_lib -lusbd_11uxx_lib
 Finished building target: nxp_lpcxpresso_11u14_usbd_lib_cdc.axf
  
 make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "nxp_lpcxpresso_11u14_usbd_lib_cdc.axf" ; arm-none-eabi-objcopy -O binary "nxp_lpcxpresso_11u14_usbd_lib_cdc.axf" "nxp_lpcxpresso_11u14_usbd_lib_cdc.bin" ; checksum -p LPC11U24_401 -d "nxp_lpcxpresso_11u14_usbd_lib_cdc.bin"
    text	   data	    bss	    dec	    hex	filename
-  28736	    104	   7740	  36580	   8ee4	nxp_lpcxpresso_11u14_usbd_lib_cdc.axf
+  31072	    104	   7752	  38928	   9810	nxp_lpcxpresso_11u14_usbd_lib_cdc.axf
 Written checksum 0xefffdd15 at offset 0x1c in file nxp_lpcxpresso_11u14_usbd_lib_cdc.bin
 Previous value 0x00000000 at offset 0x1c in file nxp_lpcxpresso_11u14_usbd_lib_cdc.bin
  

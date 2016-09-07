@@ -1,6 +1,7 @@
 #include "board.h"
 #include <limits.h>
 #include <stdint.h>
+#include <string.h>
 
 #include "FreeRTOS.h"
 #include "task.h"
@@ -586,7 +587,7 @@ bool pingHost(const char *host)
 	return ret;
 }
 
-int r0,r1,r2
+int r0,r1,r2;
 void vEspTask(void *pvParameters)
 {
 
@@ -599,25 +600,61 @@ void vEspTask(void *pvParameters)
 	char str[250];
 	int rdCnt, strLen;
 	TStringType ts;
+	bool warn = false;
+	int warnLevel = 0;
 	for (;;) {
 		//rdCnt = Chip_UART_ReadRB(LPC_USART, &rxring, str, 50);
-		espReadStringByChar(str, &strLen, portMAX_DELAY, &ts);
+		if(espReadStringByChar(str, &strLen, 50, &ts) == true){
+			//recvStr[rdInd+rdCnt] = 0;
+			int r= atoi(&(str[1]));
+			r2=r1;
+			r1=r0;
+			r0=r;
+			float v=((r2-r0)*5)/100.;
+			if((r < 150) && (v > 1.0))
+				warnLevel = 3;
+			else if(v > 1.0)
+				warnLevel = 2;
+			else if(r < 150)
+				warnLevel = 1;
+			else
+				warnLevel = 0;
 
-		//recvStr[rdInd+rdCnt] = 0;
-		int r= atoi(&(str[1]));
-		r2=r1;
-		r1=r0;
-		r0=r;
-		int v=r0-r2;
-		sprintf(str, " > %d \r\n", r);//debug
-		vcomPrintfLen(str, strLen); //debug
-		if(r < 150){
-			 Chip_GPIO_SetPinToggle(LPC_GPIO, 0, 4);
-			 //Chip_GPIO_SetPinOutHigh(LPC_GPIO, 0, 4);
+			if(r0 != r1){
+				sprintf(str, " > %d[%.2f] ", r, v);//debug
+
+				switch(warnLevel){
+					case 0:
+						break;
+					case 1:
+						strcat(str, "r");
+						break;
+					case 2:
+						strcat(str, "v");
+						break;
+					case 3:
+						strcat(str, "rv");
+						break;
+				}
+				strcat(str, "\r\n");
+
+				vcomPrintfLen(str, strlen(str)); //debug
+
+			}
 		}
 		else{
-			Chip_GPIO_SetPinOutHigh(LPC_GPIO, 0, 4);
-
+			switch(warnLevel){
+				case 0:
+					Chip_GPIO_SetPinOutHigh(LPC_GPIO, 0, 4);
+					break;
+				case 1:
+					Chip_GPIO_SetPinOutLow(LPC_GPIO, 0, 4);
+					break;
+				case 2:
+				case 3:
+					Chip_GPIO_SetPinToggle(LPC_GPIO, 0, 4);
+					break;
+			}
 		}
 
 	}

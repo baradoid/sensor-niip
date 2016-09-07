@@ -5,7 +5,7 @@
  * Generated linker script file for LPC11U24/401
  * Created from memory.ldt by FMCreateLinkMemory
  * Using Freemarker v2.3.23
- * LPCXpresso v8.1.4 [Build 606] [2016-03-14]  on Mar 24, 2016 11:15:38 PM
+ * LPCXpresso v8.2.0 [Build 647] [2016-07-18]  on 07.09.2016 16:10:27
  */
 
 MEMORY
