@@ -502,3 +502,15 @@ Command-line arguments:  -os win32 -ws win32 -arch x86
 
 !ENTRY org.eclipse.ui 4 4 2016-09-07 13:02:49.591
 !MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-09-07 16:12:11.044
+!MESSAGE An internal error occurred during: "C/C++ Indexer".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.core.internal.runtime.InternalPlatform.getLog(InternalPlatform.java:349)
+	at org.eclipse.core.runtime.Plugin.getLog(Plugin.java:297)
+	at org.eclipse.cdt.core.CCorePlugin.log(CCorePlugin.java:1439)
+	at org.eclipse.cdt.core.CCorePlugin.log(CCorePlugin.java:1418)
+	at org.eclipse.cdt.core.CCorePlugin.log(CCorePlugin.java:1403)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:162)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
